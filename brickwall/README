@@ -1,0 +1,30 @@
+To compile use:
+g++ -Wall -o brickwall BrickBond.cpp BrickWall.cpp main.cpp
+or with debug code
+g++ -Wall -DDEBUG -o brickwall BrickBond.cpp BrickWall.cpp main.cpp
+
+To Run.
+
+./brickwall 48 10
+
+Result:
+
+309594543758
+
+Time:
+
+real	0m0.042s
+user	0m0.036s
+sys	0m0.005s
+
+System used:
+
+Model Name: MacBook Pro
+Model Identifier: MacBookPro8,2
+Processor Name: Intel Core i7
+Processor Speed: 2.5 GHz
+Number of Processors: 1
+Total Number of Cores: 4
+L2 Cache (per Core): 256 KB
+L3 Cache: 8 MB
+Memory: 16 GB
