@@ -5,7 +5,7 @@
 //
 #include <iostream>
 #include <math.h>
-#include "Brickbond.h"
+#include "BrickBond.h"
 #include "BrickWall.h"
 
 using namespace std;
