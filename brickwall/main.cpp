@@ -49,8 +49,8 @@ int main (int argc, char** argv) {
 	#endif
 
 	CombTree  *permutations = wall.getPermutations();
-	unsigned long combinations = 0;
-	unsigned long totalCombinations = 0;
+	unsigned long long combinations = 0;
+	unsigned long long totalCombinations = 0;
 
 	// calculate combination
 	// first row of bricks can be filled with all possible permutations

@@ -57,10 +57,10 @@ int BrickWall::createPermutations()
 	combTree = hArray;
 	
 	if(combArray==NULL) {
-		combArray = new unsigned long*[height];
+		combArray = new unsigned long long*[height];
 	}
 	for(int i=0; i<height; i++) {
-		combArray[i]= new unsigned long[totalPerm];
+		combArray[i]= new unsigned long long[totalPerm];
 		for(int j=0; j<totalPerm; j++) {
 			combArray[i][j]=0;
 		}
@@ -142,7 +142,7 @@ void BrickWall::printPermutations()
 	}
 }
 
-unsigned long BrickWall::validPermutations(int height, CombTree *p, int idx)
+unsigned long long BrickWall::validPermutations(int height, CombTree *p, int idx)
 {
 	if(p->validPerms==NULL) {
 		p->validPerms = new unsigned int[totalPerm];
@@ -155,7 +155,7 @@ unsigned long BrickWall::validPermutations(int height, CombTree *p, int idx)
 			}
 		}
 	}
-	unsigned long validCount=0;
+	unsigned long long validCount=0;
 	
 	for(int i=0; i<p->totalMatch; ++i) {
 		int h = height;

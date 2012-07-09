@@ -40,7 +40,7 @@ private:
 	// the leaf nodes are the possible permutations for the given width with bitmaps
 	PermTree *head; 
 	int totalPerm; // total number of permutations (count of leaf nodes)
-	unsigned long **combArray; // 2D array for loop optimization caching
+	unsigned long long **combArray; // 2D array for loop optimization caching
 	CombTree *combTree; // cache to store valid permutation for performance optimization
 
 	// create the permutation of blocks recursively
@@ -55,7 +55,7 @@ public:
 
 	int createPermutations();
 	CombTree* getPermutations();
-	unsigned long validPermutations(int height, CombTree *p, int idx);
+	unsigned long long validPermutations(int height, CombTree *p, int idx);
 
 	void printPermutations();
 };
