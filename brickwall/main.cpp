@@ -49,7 +49,7 @@ int main (int argc, char** argv) {
 	#endif
 
 	CombTree  *permutations = wall.getPermutations();
-	int combinations = 0;
+	unsigned long combinations = 0;
 	unsigned long totalCombinations = 0;
 
 	// calculate combination
