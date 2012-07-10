@@ -27,6 +27,12 @@ BrickWall::~BrickWall()
 		}
 		delete combArray;
 	}
+
+	for(int i=0;i<totalPerm;i++) {
+		delete combTree[i].validPerms;
+		delete combTree[i].matchIndex;
+	}
+	delete combTree;
 }
 
 void BrickWall::deleteTree(PermTree *pt) 

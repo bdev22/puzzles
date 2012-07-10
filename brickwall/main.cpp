@@ -56,6 +56,8 @@ int main (int argc, char** argv) {
 	// first row of bricks can be filled with all possible permutations
 	// floowing that each row will only allow permutations where the 
 	// brick bonds do not allign i.e. the AND with bitmap should be 0
+	// validPermutations will recursively calculate all possible allowed permutaions 
+	// for each height level spaecified
 	for(int i=0; i<perm; i++) {
 		combinations = wall.validPermutations(height-1, &permutations[i], i);
 		totalCombinations += combinations;

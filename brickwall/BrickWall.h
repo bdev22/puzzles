@@ -55,6 +55,7 @@ public:
 
 	int createPermutations();
 	CombTree* getPermutations();
+	// calculates all possible permutaions recursively by height of the wall
 	unsigned long long validPermutations(int height, CombTree *p, int idx);
 
 	void printPermutations();
