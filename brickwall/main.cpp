@@ -28,7 +28,11 @@ int main (int argc, char** argv) {
 		exit(0);
 	}
 	if(fmod(width,1.5)!=0) {
+		#ifdef DEBUG
 		cout << "Width do not match the brick size for uniform wall\n";
+		#else
+		cout << "0\n";
+		#endif
 		exit(1);
 	}
 
@@ -59,7 +63,12 @@ int main (int argc, char** argv) {
 	// validPermutations will recursively calculate all possible allowed permutaions 
 	// for each height level spaecified
 	for(int i=0; i<perm; i++) {
-		combinations = wall.validPermutations(height-1, &permutations[i], i);
+		if(height > 1) {
+			combinations = wall.validPermutations(height-1, &permutations[i], i);
+		}
+		else {
+			combinations = 1;
+		}
 		totalCombinations += combinations;
 		#ifdef DEBUG
 		cout<<"perm["<<i<<"]=";brickBond.printBitMap(permutations[i].bitMap);
